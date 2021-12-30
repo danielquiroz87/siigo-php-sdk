@@ -14,7 +14,7 @@ use Requests_Session;
 
 final class Client
 {
-    public const BASE_URL = 'http://siigoapi.azure-api.net/siigo/api/v1/';
+    public const BASE_URL = 'https://integrations.siigo.com/api/v1/';
     public const NAMESPACE = 'v1';
     public const USER_AGENT = 'phpackage/siigo-php-sdk';
 
@@ -143,7 +143,7 @@ final class Client
         }
 
         $response = Requests::post(
-            'https://siigonube.siigo.com:50050/connect/token',
+            'https://integrations.siigo.com/auth/connect/token',
             $headers,
             $data,
             compact('auth')
